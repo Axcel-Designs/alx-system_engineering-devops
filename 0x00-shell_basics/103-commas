@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | grep -E '^(\.\/|[^.])' | sed -E 's/([^0-9a-zA-Z])$/\1\//' | LC_ALL=C sort -t'/' -k2,2n -k1,1 | tr '\n' ',' && echo
+ls -apm | sort -d
